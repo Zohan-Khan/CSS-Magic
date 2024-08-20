@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Hover Animation</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #282c34;
+        }
+        .container {
+            position: relative;
+            font-family: 'Arial', sans-serif;
+            font-size: 36px;
+            color: #fff;
+            text-align: center;
+        }
+        .neon-text {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            text-align: center;
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+        .neon-text.first {
+            color: #3498db; /* Blue color */
+            text-shadow: 0 0 15px #3498db, 
+                         0 0 30px #3498db, 
+                         0 0 45px #3498db, 
+                         0 0 60px #3498db;
+            opacity: 1;
+            transform: scale(1);
+        }
+        .neon-text.second {
+            color: #e74c3c; /* Red color */
+            text-shadow: 0 0 15px #e74c3c, 
+                         0 0 30px #e74c3c, 
+                         0 0 45px #e74c3c, 
+                         0 0 60px #e74c3c;
+            opacity: 0;
+            transform: scale(1.1);
+        }
+        .container:hover .neon-text.first {
+            opacity: 0;
+            transform: scale(0.9);
+        }
+        .container:hover .neon-text.second {
+            opacity: 1;
+            transform: scale(1);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="neon-text first">I am a Web developer</div>
+        <div class="neon-text second">Made by Noor-Us-Sahar Roll No: 6412</div>
+    </div>
+</body>
+</html>
